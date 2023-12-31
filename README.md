@@ -30,7 +30,7 @@ home-manager = {
   users = {
     "username" = import ./home.nix;
   };
-}
+};
 ```
 
 ## example module / main-user.nix
