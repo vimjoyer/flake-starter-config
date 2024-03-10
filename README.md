@@ -101,7 +101,8 @@ in
 ## adding standalone home-manager configurations
 ```nix
 homeConfigurations.homeConfigName = inputs.home-manager.lib.homeManagerConfiguration {
-  inherit pkgs;
+  # Specify the host architecture
+  pkgs = nixpkgs.legacyPackages."x86_64-linux";
 
   # Specify your home configuration modules here, for example,
   # the path to your home.nix.
