@@ -97,3 +97,21 @@ in
 
      home.nix
 ```
+
+## adding standalone home-manager configurations
+```nix
+homeConfigurations.homeConfigName = inputs.home-manager.lib.homeManagerConfiguration {
+  inherit pkgs;
+
+  # Specify your home configuration modules here, for example,
+  # the path to your home.nix.
+  modules = [ ./home.nix ];
+
+  extraSpecialArgs = { inherit inputs; };
+};
+```
+This alternative approach can be used on any machine that supports nix.
+
+```bash
+home-manager switch --flake /etc/nixos/#homeConfigName
+```
