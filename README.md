@@ -18,7 +18,7 @@ $ sudo nixos-rebuild switch --flake /etc/nixos/#default
 
 ## generating home.nix
 ```bash
-$ nix run home-manager/master -- init && \\
+$ nix run home-manager/master -- init && \
   sudo cp ~/.config/home-manager/home.nix /etc/nixos/
 ```
 
