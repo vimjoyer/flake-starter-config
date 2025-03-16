@@ -13,7 +13,7 @@ $ sudo nix flake init --template github:vimjoyer/flake-starter-config
 ## rebuilding with flakes enabled
 
 ```bash
-$ sudo nixos-rebuild switch --flake /etc/nixos/#default
+$ sudo nixos-rebuild switch --flake /etc/nixos/#nixos
 ```
 
 ## generating home.nix
